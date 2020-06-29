@@ -1,0 +1,148 @@
+nav{
+	color:white;
+}
+.menu-wrapper{
+	position:fixed;
+	top:0px;
+	right:0px;
+}
+
+.menu-wrapper .toggler{
+	position: absolute;
+	top:00px;
+	right:0px;
+	height:50px;
+	width:50px;
+	margin:5px;
+	z-index: 2;
+	opacity: 0;
+
+}
+
+.menu-wrapper .hamburger{
+	height:50px;
+	width:50px;
+	position:absolute;
+	top:0px;
+	right:0px;
+	margin:5px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color:green;
+	z-index: 1;
+}
+
+.menu-wrapper .hamburger > div{
+	height:2px;
+	position:relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width:80%;
+	background-color: white;
+	transition: all 0.4s ease;
+}
+
+.menu-wrapper .hamburger > div::before,
+.menu-wrapper .hamburger > div::after{
+	content: "";
+	position: absolute;
+	top:-10px;
+	background-color: inherit;
+	width: 100%;
+	height: inherit;
+}
+
+.menu-wrapper .hamburger > div::after{
+	top:10px;
+}
+
+.menu-wrapper .toggler:checked + .hamburger > div{
+	transform: rotate(-135deg);
+}
+
+.menu-wrapper .toggler:checked + .hamburger > div::before,
+.menu-wrapper .toggler:checked + .hamburger > div::after{
+	top:0px;
+	transform: rotate(90deg);
+}
+
+.menu-wrapper .toggler:checked:hover + .hamburger > div{
+
+	transform: rotate(125deg);
+}
+
+.menu-wrapper .toggler:checked ~ .menu{
+	visibility:visible;
+}
+
+.menu-wrapper .toggler:checked ~ .menu>div{
+  transform: scale(1);
+}
+
+.menu-wrapper .toggler:checked ~ .menu>div>div{
+  opacity: 1;
+}
+
+
+.menu-wrapper .menu{
+	position:fixed;
+	top:0px;
+	right:0px;
+	height:100%;
+	width: 100%;
+	visibility: hidden;
+	align-items: center;
+	justify-content: center;
+	display: flex;
+	overflow: hidden;
+ }
+
+.menu-wrapper .menu> div{
+	background-color:rgba(100,100,150,0.4);
+  border-radius: 50%;
+	height:200vw;
+  width:200vw;
+	display: flex;
+  flex: none;
+	align-items: center;
+	justify-content: center;
+	transform: scale(0);
+  transition: all 0.8s ease;
+}
+
+.menu-wrapper .menu> div>div{
+	text-align: center;
+  align-items: center;
+  justify-content: center;
+	
+  opacity: 0;
+  transition: all 0.4s ease 0.4s;
+
+}
+
+
+.menu-wrapper .menu> div>div>ul{
+  list-style: none;
+  line-height: 40px; 
+
+}
+
+.menu-wrapper .menu> div>div>ul>li>a{
+  text-decoration: none;
+  color: white;
+}
+
+.menu-wrapper .menu> div>div>ul>li>a:hover{
+  font-size: 120%;
+  transition: all 0.4s ease;
+}
+
+
+
+
+
+
+
+

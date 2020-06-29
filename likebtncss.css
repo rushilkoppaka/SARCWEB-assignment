@@ -1,0 +1,25 @@
+.likebtn-container{
+	box-sizing: border-box;
+	
+	margin: auto;
+	transition: all 0.4s ease;
+}
+
+.likebtn-container img{
+	display: flex;
+	
+
+}
+
+.likebtn-container .like-btn{
+
+	}
+.likebtn-container .react{
+	margin: 5px;
+
+	
+}
+.likebtn-container .react > div >button{
+	margin:5px;
+}
+
